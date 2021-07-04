@@ -1,5 +1,5 @@
 public abstract class Conta {
-    protected double saldo;
+    private double saldo;
     private int agencia;
     private int numero;
     private Cliente titular;

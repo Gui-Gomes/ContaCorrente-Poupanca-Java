@@ -5,8 +5,8 @@ public class ContaCorrente extends Conta {
 
     @Override
     public boolean transferir(double valor, Conta destino) {
-        if(super.saldo >= valor) {
-            super.saldo -= valor;
+        if(getSaldo() >= valor) {
+            sacar(valor);
             destino.depositar(valor);
             System.out.println("Operação realizada com sucesso!");
             return true;

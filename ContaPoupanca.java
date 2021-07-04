@@ -26,7 +26,7 @@ public class ContaPoupanca extends Conta {
     public boolean transferir(double valor, Conta destino) {
         double valorComTaxa = valor - (0.01 * valor);
         if (getSaldo() >= valorComTaxa) {
-            super.saldo -= valorComTaxa;
+            sacar(valorComTaxa);
             destino.depositar(valor);
             System.out.println("Operação realizada com sucesso!");
             return true;
